@@ -152,15 +152,21 @@ console.log(
  */
 
 function teachPerson(myPerson: Person, mySkills: Skill[]): void {
-  myPerson.skills = [...myPerson.skills, ...mySkills]
+  myPerson.skills = [...myPerson.skills, ...mySkills];
 }
 
 // --------------------------------------------------------------------------
 
 // To test your solution, uncomment the following lines and run `node app.js`
 
-teachPerson(myPerson, mySkills)
-console.log(`-----------\nExercise 5:\n-----------\nmyPerson:\n${JSON.stringify(myPerson, null, 2)}\n`)
+teachPerson(myPerson, mySkills);
+console.log(
+  `-----------\nExercise 5:\n-----------\nmyPerson:\n${JSON.stringify(
+    myPerson,
+    null,
+    2
+  )}\n`
+);
 
 // --------------------------------------------------------------------------
 
@@ -171,12 +177,15 @@ console.log(`-----------\nExercise 5:\n-----------\nmyPerson:\n${JSON.stringify(
  * The function should return a random element from the skills array
  */
 
-
+function getRandomSkill(myPerson: Person) {
+  const rand = Math.floor(Math.random() * myPerson.skills.length);
+  return myPerson.skills[rand];
+}
 
 // --------------------------------------------------------------------------
 
 // To test your solution, uncomment the following line and run `node app.js`
 
-// console.log(`-----------\nExercise 6:\n-----------\nRandom Skill:\n${JSON.stringify(getRandomSkill(myPerson), null, 2)}\n`)
+console.log(`-----------\nExercise 6:\n-----------\nRandom Skill:\n${JSON.stringify(getRandomSkill(myPerson), null, 2)}\n`)
 
 // --------------------------------------------------------------------------

@@ -84,7 +84,11 @@ console.log("-----------\nExercise 5:\n-----------\nmyPerson:\n".concat(JSON.str
  *   - myPerson
  * The function should return a random element from the skills array
  */
+function getRandomSkill(myPerson) {
+    var rand = Math.floor(Math.random() * myPerson.skills.length);
+    return myPerson.skills[rand];
+}
 // --------------------------------------------------------------------------
 // To test your solution, uncomment the following line and run `node app.js`
-// console.log(`-----------\nExercise 6:\n-----------\nRandom Skill:\n${JSON.stringify(getRandomSkill(myPerson), null, 2)}\n`)
+console.log("-----------\nExercise 6:\n-----------\nRandom Skill:\n".concat(JSON.stringify(getRandomSkill(myPerson), null, 2), "\n"));
 // --------------------------------------------------------------------------
